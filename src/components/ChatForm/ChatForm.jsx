@@ -2,7 +2,7 @@ import { useState } from "react";
 import { getTime } from "../../utils/functions";
 import { io } from "socket.io-client";
 import { SendIcon } from "../Icons/Icons";
-const socket = io("/");
+const socket = io(import.meta.env.VITE_URL_BACKEND)
 
 const ChatForm = ({ username }) => {
   const [newMessage, setNewMessage] = useState("");
