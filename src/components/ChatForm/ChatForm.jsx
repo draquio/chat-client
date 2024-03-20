@@ -24,7 +24,7 @@ const ChatForm = ({ username }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex w-[95%] m-auto z-20 relative gap-x-1.5"
+      className="flex w-[95%] m-auto z-20 relative gap-x-1.5 mt-1"
     >
       <input
         className="min-h-11 w-full focus-visible:outline-none border-2 rounded-3xl px-4"
@@ -32,6 +32,7 @@ const ChatForm = ({ username }) => {
         placeholder="Escribe tu mensaje"
         onChange={(e) => setNewMessage(e.target.value)}
         value={newMessage}
+        autoComplete="off"
       />
       <button className="p-4 bg-[--main-color] text-white block rounded-full">
         <SendIcon />
