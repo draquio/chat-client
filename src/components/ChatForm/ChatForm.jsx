@@ -2,7 +2,7 @@ import { useState } from "react";
 import { getTime } from "../../utils/functions";
 import { io } from "socket.io-client";
 import { SendIcon } from "../Icons/Icons";
-const socket = io(import.meta.env.VITE_URL_BACKEND)
+const socket = io(import.meta.env.VITE_URL_BACKEND);
 
 const ChatForm = ({ username }) => {
   const [newMessage, setNewMessage] = useState("");
@@ -15,8 +15,10 @@ const ChatForm = ({ username }) => {
         user: username,
         time: getTime(),
       };
-      socket.emit("message", bodymessage);
-      setNewMessage("");
+      if (username.length !== 0) {
+        socket.emit("message", bodymessage);
+        setNewMessage("");
+      }
     }
   };
   return (
