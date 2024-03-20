@@ -27,7 +27,7 @@ const Chat = ({ username, setUsername }) => {
   }, [messages, setUsername]);
   return (
     <>
-    <div className="absolute inset-0 bg-[url('./img/background.jpg')] h-[100%] opacity-10 bg-fixed -z-10"></div>
+    <div className="absolute inset-0 bg-[url('/img/background.jpg')] h-[100%] opacity-10 bg-fixed -z-10"></div>
       <section className="sm:h-[75dvh] h-[90dvh]">
         <h1 className="bg-[--main-color] px-3 text-[--text-white-color] font-bold h-[5dvh] flex items-center">Chat grupal</h1>
         <ul
