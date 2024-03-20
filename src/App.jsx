@@ -16,7 +16,7 @@ function App() {
     <main>
       {!username && <Username setUsername={setUsername} />}
       <div className="h-[100dvh] justify-center flex flex-col max-w-[1000px] m-auto">
-        <div className="grid sm:grid-cols-[250px_auto] sm:min-h-[80dvh] min-h-screen shadow-[0px_0px_19px_2px_#00000042;]">
+        <div className="grid sm:grid-cols-[250px_auto] sm:min-h-[80dvh] h-[100dvh] shadow-[0px_0px_19px_2px_#00000042;]">
           <Sidebar />
           <div className="relative">
             <Chat username={username} setUsername={setUsername} />
