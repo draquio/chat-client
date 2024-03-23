@@ -13,7 +13,7 @@ function App() {
   const [backendavailable, setBackendAvailable] = useState(false);
   useEffect(() => {
     setUsername(localStorage.getItem("username"));
-    setAvatar(localStorage.getItem("avatar") || "1.png");
+    setAvatar(localStorage.getItem("avatar") || "1.webp");
     setColor(localStorage.getItem("color"));
   }, [backendavailable]);
   return (

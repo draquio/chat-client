@@ -20,7 +20,9 @@ export const Avatar = ({ setAvatar, avatar }) => {
                 : "outline-[--opacity-color-text]"
             }`}
             src={`/avatar/${img.name}`}
+            alt="avatar chat"
             onClick={() => handleSelectAvatar(img)}
+            loading="eager"
           />
         </figure>
       ))}

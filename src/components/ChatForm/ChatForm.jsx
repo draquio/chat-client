@@ -40,7 +40,7 @@ const ChatForm = ({ username, avatar, color, backendavailable }) => {
         disabled={!backendavailable}
 
       />
-      <button className="p-4 bg-[--main-color] text-[--text-white-color] block rounded-full">
+      <button title="Enviar mensaje" id="enviar" aria-label="Enviar" className="p-4 bg-[--main-color] text-[--text-white-color] block rounded-full">
         <SendIcon />
       </button>
     </form>
