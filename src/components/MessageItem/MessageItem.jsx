@@ -4,7 +4,7 @@ const MessageItem = (props) => {
     <>
       {username !== message.user ? (
         <div className="flex items-start mx-1 gap-x-1">
-          <img src={`/avatar/${message.avatar}`} height={24} width={24} />
+          <img src={`/avatar/${message.avatar}`} alt="avatar" height={24} width={24} />
           <div className="max-w-[80%] w-fit min-w-[100px] mb-1 pr-9 pl-4 rounded-xl relative rounded-tl-none bg-[--opacity-color-text] text-[--text-dark-color]">
             <div className="py-2">
               <p
