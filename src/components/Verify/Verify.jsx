@@ -3,7 +3,7 @@ import { verifyServer } from "../../utils/functions";
 
 const Verify = ({setBackendAvailable}) => {
   useEffect(() => {
-    const Maxattempts = 30;
+    const Maxattempts = 60;
     let attempts = 0;
     const waitBackend = async () => {
       const available = await verifyServer();
