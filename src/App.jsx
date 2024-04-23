@@ -24,7 +24,7 @@ function App() {
         <div className="grid sm:grid-cols-[250px_auto] sm:h-[80dvh] h-[100dvh] shadow-[0px_0px_19px_2px_#00000042]">
           <Sidebar username={username} avatar={avatar} color={color} />
           <div className="relative">
-            <Chat username={username} setUsername={setUsername} />
+            <Chat username={username} />
             <ChatForm username={username} avatar={avatar} color={color} backendavailable={backendavailable}/>
           </div>
         </div>

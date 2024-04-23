@@ -8,6 +8,7 @@
     --text-white-color: white;
     --text-dark-color: rgb(26, 26, 26);
     --background-color: #ffffff;
+    color-scheme: light dark;
 }
 
 

@@ -3,7 +3,7 @@ import MessageItem from "../MessageItem/MessageItem";
 import { getRandomColor, getTime } from "../../utils/functions";
 import { io } from "socket.io-client";
 const socket = io(import.meta.env.VITE_URL_BACKEND);
-const Chat = ({ username, setUsername }) => {
+const Chat = ({ username }) => {
   const chatContainer = useRef(null);
   const [messages, setMessages] = useState([
     {
@@ -27,8 +27,7 @@ const Chat = ({ username, setUsername }) => {
     socket.on("message", (message) => {
       setMessages([...messages, message]);
     });
-    setUsername(localStorage.getItem("username"));
-  }, [messages, setUsername]);
+  }, [messages]);
   return (
     <>
     <div className="absolute inset-0 bg-[url('/img/background.webp')] bg-center h-[100%] opacity-10 bg-fixed -z-10"></div>

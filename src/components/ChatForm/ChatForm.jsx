@@ -29,7 +29,6 @@ const ChatForm = ({ username, avatar, color, backendavailable }) => {
       className="flex w-[95%] m-auto z-20 relative gap-x-1.5 mt-1"
       autoComplete="off"
     >
-      {/* Servidor: {!backendavailable ? "es true" : "es false"} */}
       <input
         className="min-h-11 w-full focus-visible:outline-none border-2 rounded-3xl px-4 disabled:bg-[whitesmoke]"
         type="text"
