@@ -19,13 +19,25 @@ function App() {
   return (
     <main>
       <Verify setBackendAvailable={setBackendAvailable} />
-      {!username && <Username setUsername={setUsername} setAvatar={setAvatar} setColor={setColor} avatar={avatar} />}
+      {!username && (
+        <Username
+          setUsername={setUsername}
+          setAvatar={setAvatar}
+          setColor={setColor}
+          avatar={avatar}
+        />
+      )}
       <div className="h-[100dvh] justify-center flex flex-col max-w-[1000px] m-auto">
         <div className="grid sm:grid-cols-[250px_auto] sm:h-[80dvh] h-[100dvh] shadow-[0px_0px_19px_2px_#00000042]">
           <Sidebar username={username} avatar={avatar} color={color} />
           <div className="relative">
             <Chat username={username} />
-            <ChatForm username={username} avatar={avatar} color={color} backendavailable={backendavailable}/>
+            <ChatForm
+              username={username}
+              avatar={avatar}
+              color={color}
+              backendavailable={backendavailable}
+            />
           </div>
         </div>
       </div>
