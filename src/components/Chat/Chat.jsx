@@ -2,7 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import MessageItem from "../MessageItem/MessageItem";
 import { getRandomColor, getTime } from "../../utils/functions";
 import { io } from "socket.io-client";
-const socket = io(import.meta.env.VITE_URL_BACKEND);
+const socket = io(import.meta.env.VITE_URL_BACKEND, {
+  withCredentials: true
+});
 const Chat = ({ username }) => {
   const chatContainer = useRef(null);
   const [messages, setMessages] = useState([
